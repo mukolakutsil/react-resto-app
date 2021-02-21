@@ -60,7 +60,11 @@
         }
     }
 
-
+    .btn-wrap {
+        width: 230px;
+        margin: 0 auto;
+        margin-top: 50px;
+    }
 
     &__close {
         position: absolute;
@@ -75,4 +79,5 @@
         border: 1px solid #fff;
         cursor: pointer;
     }
+
 }

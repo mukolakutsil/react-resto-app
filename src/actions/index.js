@@ -52,6 +52,12 @@ const openInfo = (id) => {
     }
 }
 
+const makedOrder = () => {
+    return {
+        type: 'MAKED_ORDER',
+    }
+}
+
 export {
     menuLoaded,
     menuRequested,
@@ -60,5 +66,6 @@ export {
     deleteFromCart,
     addedToNumber,
     removeFromNumber,
-    openInfo
+    openInfo,
+    makedOrder
 }

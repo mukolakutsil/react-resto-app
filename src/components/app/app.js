@@ -15,7 +15,6 @@ const App = () => {
                 <Route path='/' exact component={() => <MainPage />} />
                 <Route path='/cart' component={CartPage} />
                 <Route path='/info/:id' component={InfoPage} />
-                <Route exact component={MainPage} />
             </Switch>
         </div>
     )

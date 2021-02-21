@@ -13,10 +13,12 @@ class MenuList extends Component {
     componentDidMount() {
         this.props.menuRequested();
 
-        this.props.RestoService.getMenuItems()
+        const { RestoService } = this.props;
+        RestoService.getMenuItems()
             .then(res => this.props.menuLoaded(res))
-            .catch(error => this.props.menuError());
+            .catch(() => this.props.menuError());
     }
+
 
     render() {
 

@@ -151,6 +151,14 @@ const reducer = (state = initialState, action) => {
                 openedInfo: elemtntOpen
             };
 
+        case 'MAKED_ORDER':
+            const newItems = [];
+            const newTotal = 0;
+            return {
+                ...state,
+                items: newItems,
+                total: newTotal
+            }
         default:
             return state;
     }
