@@ -1,2 +1,6 @@
-import MenuListItem from './menu-list-item';
-export default MenuListItem;
+import { MenuListItem, addedToCartbtn } from './menu-list-item';
+
+export {
+    MenuListItem,
+    addedToCartbtn
+};

@@ -3,6 +3,7 @@ const initialState = {
     loading: true,
     items: [],
     total: 0,
+    openedInfo: {}
 }
 
 
@@ -137,8 +138,18 @@ const reducer = (state = initialState, action) => {
                     ...state.items.slice(elemIndx + 1)
                 ],
                 total: state.total - newElement.price
-            }
+            };
 
+        case 'OPEN_INFO':
+
+            const elementIdOpen = action.payload;
+
+            const elemtntOpen = state.menu.find(item => item.id === elementIdOpen);
+
+            return {
+                ...state,
+                openedInfo: elemtntOpen
+            };
 
         default:
             return state;

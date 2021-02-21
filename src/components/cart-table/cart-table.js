@@ -16,9 +16,19 @@ const CartTable = ({ items, deleteFromCart, addedToNumber, removeFromNumber }) =
                                 <div className="cart__item-title">{item.title}</div>
                                 <div className="cart__item-price">{item.price}$</div>
                                 <div className="cart__item-number">
-                                    <span onClick={() => { addedToNumber(item.id) }}> + </span>
-                                    <span> {item.counterIdentical} </span>
-                                    <span onClick={() => { removeFromNumber(item.id) }}> - </span>
+                                    <span
+                                        className="cart__item-plus"
+                                        onClick={() => { addedToNumber(item.id) }}
+                                    > +
+                                    </span>
+                                    <span
+                                        className="cart__item-num"
+                                    > {item.counterIdentical}
+                                    </span>
+                                    <span className="cart__item-minus"
+                                        onClick={() => { removeFromNumber(item.id) }}
+                                    > -
+                                    </span>
 
                                 </div>
                                 <div

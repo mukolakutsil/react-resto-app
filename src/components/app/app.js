@@ -1,5 +1,5 @@
 import React from 'react';
-import { MainPage, CartPage } from '../pages';
+import { MainPage, CartPage, InfoPage } from '../pages';
 import AppHeader from '../app-header';
 
 
@@ -14,6 +14,7 @@ const App = () => {
             <Switch>
                 <Route path='/' exact component={() => <MainPage />} />
                 <Route path='/cart' component={CartPage} />
+                <Route path='/info/:id' component={InfoPage} />
                 <Route exact component={MainPage} />
             </Switch>
         </div>

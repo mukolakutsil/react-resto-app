@@ -44,6 +44,14 @@ const removeFromNumber = (id) => {
         payload: id,
     }
 }
+
+const openInfo = (id) => {
+    return {
+        type: 'OPEN_INFO',
+        payload: id,
+    }
+}
+
 export {
     menuLoaded,
     menuRequested,
@@ -51,5 +59,6 @@ export {
     addedToCart,
     deleteFromCart,
     addedToNumber,
-    removeFromNumber
+    removeFromNumber,
+    openInfo
 }
